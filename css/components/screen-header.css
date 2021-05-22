@@ -1,0 +1,33 @@
+.screen-header {
+  display: flex;
+  justify-content: space-between;
+  /*Friends라는 글자와 아이콘 세 개를 떨어뜨리기*/
+  padding: 20px;
+  padding-top: 40px;
+}
+
+.screen-header__title {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.screen-header__icons span {
+  margin-left: 25px;
+  position: relative;
+  /*find.html에서 cog위에 nav__little second
+  빨간 점 positon: absolute;*/
+}
+@keyframes rotateCog {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.screen-header__icons .fa-cog:hover {
+  /*screen-header를 적어주지 않으면
+  header가 아닌 모든 cog에 일괄 적용됨*/
+  animation: rotateCog 2s linear infinite;
+}

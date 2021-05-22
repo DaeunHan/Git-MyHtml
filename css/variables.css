@@ -1,0 +1,8 @@
+:root {
+  --yellow: #fae100;
+  /*어느 곳에서나 #fae100을 쓰고 싶을 때
+  var(--yellow); 를 써주면 쓸 수 있음*/
+  --horizontal-space: 13px;
+  --main-border: 1px solid rgba(0, 0, 0, 0.2);
+  --main-color: rgba(0, 0, 0, 0.5);
+}
