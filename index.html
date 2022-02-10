@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Kokoa Talk</title>
+</head>
+
+<body>
+    <div class="status-bar">
+        <div class="status-bar__column">
+            <span>No Service</span>
+            <i class="fas fa-wifi"></i>
+        </div>
+        <div class="status-bar__column">
+            <span>18:43</span>
+        </div>
+        <div class="status-bar__column">
+            <span>110%</span>
+            <i class="fas fa-battery-full"></i>
+            <i class="fas fa-bolt"></i>
+        </div>
+    </div>
+
+    <header class="welcome-header">
+        <h1 class="welcome-header__title">Welcome to Kokoa Clone</h1>
+        <p class="welcome-header__text"> If you have a Kokoa Account, log in with your email or Phone number.</p>
+    </header>
+    <!-- 서버가 없으니까 get 방식을 쓸 수 있음 만약 data를 서버로 보내고 싶다면
+    get방식이 아닌 post방식을 써야함 중요한 건, 여기다가 get을 써놔야한다 나중에
+    어딘가에 이 프로젝트를 업로드할 때, 프로젝트를 업로드할 곳에서 post방식 작동 X
+    get방식만 작동하기 때문에 method="get"을 꼭 써놔야 함! -->
+    <form action="friends.html" method="GET" id="login-form">
+        <input type="text" placeholder="Email or Phone number" />
+        <input type="password" placeholder="Password" />
+        <input type="submit" value="Log in" />
+        <a href="#">Find Kokoa Account or Password</a>
+
+    </form>
+
+    <div id="no-mobile">
+        <span>Your Screen is too big.</span>
+    </div>
+    
+    <script src="https://kit.fontawesome.com/d9bf1054e7.js" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

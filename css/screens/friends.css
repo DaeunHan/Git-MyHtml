@@ -1,0 +1,57 @@
+#friends-display-link {
+  text-align: center;
+  display: block;
+  background-color: #fafafa;
+  padding: 15px 0px;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+#friends-display-link i {
+  color: #0000004d;
+  /*info circle의 색상*/
+}
+.friends-screen {
+  padding: 0px var(--horizontal-space);
+}
+.friends-screen__channel {
+  margin-top: 15px;
+  border-top: var(--main-border);
+  padding-top: 15px;
+}
+.friends-screen__channel-header {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--main-color);
+}
+.friends-screen__channel-header span {
+  margin-left: 5px;
+}
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    /*visibility 속성을 주지 않으면
+    계속해서 노란 화면이 html 위에 존재하기 때문에
+    클릭할 수 없게 됨. hidden을 통해 가려주면 클릭 가능
+    하지만, 무언가를 완전히 가려야 하는 경우에는 visibility
+    속성을 사용하는 것은 적합하지 않고 Java Script 기능이 요구됨*/
+  }
+}
+#splash-screen {
+  background-color: var(--yellow);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0; /*화면의 모든 부분을 차지하게 됨*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 96px;
+  animation: hideSplashScreen 0.4s ease-in-out forwards;
+  animation-delay: 2s;
+}
